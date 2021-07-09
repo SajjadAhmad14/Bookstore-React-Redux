@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import BasicTable from './BookTable';
 
 const BookList = () => (
@@ -7,5 +7,7 @@ const BookList = () => (
     <BasicTable />
   </div>
 );
-const mapStateToProps = (state) => ({ id: state.id, title: state.title, category: state.category });
-export default connect(mapStateToProps, null)(BookList);
+// const mapStateToProps = (state) => ({ id: state.id, title: state.title,
+// category: state.category });
+// export default connect(mapStateToProps, null)(BookList);
+export default BookList;
