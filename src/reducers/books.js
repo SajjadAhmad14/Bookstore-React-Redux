@@ -1,7 +1,5 @@
-import { addBook, removeBook } from '../actions/index';
+const booksReducer = () => {
 
-const booksReducer = (addBook, removeBook) => {
-
-}
+};
 
 export default booksReducer;
