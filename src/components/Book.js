@@ -1,7 +1,11 @@
 import React from 'react-dom';
 
-const Book = () => (
-  <div>This is book component</div>
+const Book = (book) => (
+  <div>
+    This is
+    {book}
+    component.
+  </div>
 );
 
 export default Book;

@@ -4,7 +4,6 @@ const BooksForm = () => {
     <div>
       <form>
         <input type="text" name="title" id="title" />
-        {/* <label for="categories">Category</label> */}
         <select name="categories" id="categorie">
           <option value={CATEGORIES[0]}>{CATEGORIES[0]}</option>
           <option value={CATEGORIES[1]}>{CATEGORIES[1]}</option>
