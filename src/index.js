@@ -2,30 +2,12 @@ import React from 'react';
 import { createStore } from 'redux';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import booksReducer from './reducers/books';
 import App from './components/App';
+import rootReducer from './reducers/index';
 
-const initialState = {
-  books: [
-    {
-      id: 1,
-      title: 'book1',
-      category: 'Actions',
-    },
-    {
-      id: 2,
-      title: 'book2',
-      category: 'Actions',
-    },
-    {
-      id: 3,
-      title: 'book3',
-      category: 'Actions',
-    }
-  ]
-}
-const store = createStore(booksReducer,initialState);
-console.log(store.getState());
+const store = createStore(rootReducer);
+// const books = store.getState();
+// console.log(books);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

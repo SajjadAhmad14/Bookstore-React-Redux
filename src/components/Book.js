@@ -1,10 +1,17 @@
 import React from 'react-dom';
-
 const Book = (book) => (
   <div>
-    This is
-    {book}
-    component.
+    <tr>
+      <td>
+        {book.id}
+      </td>
+      <td>
+        {book.title}
+      </td>
+      <td>
+        {book.category}
+      </td>
+    </tr>
   </div>
 );
 
