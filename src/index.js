@@ -5,14 +5,27 @@ import { Provider } from 'react-redux';
 import booksReducer from './reducers/books';
 import App from './components/App';
 
-const state = [
-  {
-    id: Math.random(),
-    title: 'book1',
-    category: 'Actions',
-  },
-];
-const store = createStore(state, booksReducer);
+const initialState = {
+  books: [
+    {
+      id: 1,
+      title: 'book1',
+      category: 'Actions',
+    },
+    {
+      id: 2,
+      title: 'book2',
+      category: 'Actions',
+    },
+    {
+      id: 3,
+      title: 'book3',
+      category: 'Actions',
+    }
+  ]
+}
+const store = createStore(booksReducer,initialState);
+console.log(store.getState());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
