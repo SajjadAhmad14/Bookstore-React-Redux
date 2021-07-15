@@ -46,6 +46,8 @@ Run `npm start`<br>
 - HTML
 - CSS
 - VScode
+- Git
+- GitHub
 - Netlify
 
 ## Authors
