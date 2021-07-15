@@ -1,24 +1,9 @@
 const initialState = {
   books: [
     {
-      id: 1,
+      id: Math.floor(Math.random() * (100000 - 1 + 1)) + 1,
       title: 'book1',
       category: 'Actions',
-    },
-    {
-      id: 2,
-      title: 'book2',
-      category: 'Actions',
-    },
-    {
-      id: 3,
-      title: 'book3',
-      category: 'Actions',
-    },
-    {
-      id: 4,
-      title: 'sajjad',
-      category: 'Workout',
     },
   ],
 };

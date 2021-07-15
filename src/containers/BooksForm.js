@@ -18,7 +18,7 @@ const BooksForm = () => {
     const title = document.getElementById('title').value;
     const categories = document.getElementById('categories');
     const category = categories.value;
-    const id = 10;
+    const id = Math.floor(Math.random() * (100000 - 1 + 1)) + 1;
     setBook({
       id,
       title,
