@@ -15,6 +15,11 @@ const initialState = {
       title: 'book3',
       category: 'Actions',
     },
+    {
+      id: 4,
+      title: 'sajjad',
+      category: 'Workout',
+    },
   ],
 };
 const booksReducer = (state = initialState, action) => {

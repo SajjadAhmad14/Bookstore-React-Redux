@@ -1,6 +1,16 @@
+form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table thead {
+  background-color: #c0c0c0;
+}
+
 .size {
   width: 60%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .orange {

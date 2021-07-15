@@ -1,18 +1,21 @@
 import React from 'react-dom';
-const Book = (book) => (
-  <div>
-    <tr>
-      <td>
-        {book.id}
-      </td>
-      <td>
-        {book.title}
-      </td>
-      <td>
-        {book.category}
-      </td>
-    </tr>
-  </div>
+import PropTypes from 'prop-types';
+
+const Book = ({ book }) => (
+  <tr>
+    <td>
+      {book.id}
+    </td>
+    <td>
+      {book.title}
+    </td>
+    <td>
+      {book.category}
+    </td>
+  </tr>
 );
 
 export default Book;
+Book.propTypes = {
+  book: PropTypes.oneOfType([PropTypes.array]).isRequired,
+};
