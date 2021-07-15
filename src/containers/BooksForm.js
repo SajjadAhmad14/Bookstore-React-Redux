@@ -8,13 +8,7 @@ const BooksForm = () => {
     category: 0,
   });
 
-  // const handleChange = (e) => {
-  //   const { value } = e.traget.value;
-  //   return value;
-  // };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleChange = () => {
     const title = document.getElementById('title').value;
     const categories = document.getElementById('categories');
     const category = categories.value;
@@ -24,6 +18,11 @@ const BooksForm = () => {
       title,
       category,
     });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleChange();
   };
 
   return (
