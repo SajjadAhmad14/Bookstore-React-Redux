@@ -8,14 +8,13 @@ const initialState = {
   ],
 };
 const booksReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'CREATE_BOOK':
-      break;
-    case 'REMOVE_BOOK':
-      break;
+  const { value, type } = action;
+  switch (type) {
+    case 'ADD_BOOK':
+      return [...state.books, value];
     default:
+      return state;
   }
-  return state;
 };
 
 export default booksReducer;
