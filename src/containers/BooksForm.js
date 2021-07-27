@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../actions/index';
+import allActions from '../store/actions/index';
 
 const BooksForm = () => {
   const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -10,9 +10,33 @@ const BooksForm = () => {
     category: '',
   });
   const dispatch = useDispatch();
+  const handleInputChange = (e) => {
+    e.preventDefault();
+    const id = Math.floor(Math.random() * (100000 - 1 + 1)) + 1;
+    const title = e.target.value;
+    setBook(
+      {
+        ...book,
+        id,
+        title,
+      },
+    );
+  };
+
+  const handleCategoryChange = (e) => {
+    e.preventDefault();
+    const category = e.target.value;
+    setBook(
+      {
+        ...book,
+        category,
+      },
+    );
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addBook({ ...book, id: Math.floor(Math.random() * (100000 - 1 + 1)) + 1 }));
+    dispatch(allActions.bookActions.addBook(book));
   };
 
   return (
@@ -22,12 +46,12 @@ const BooksForm = () => {
           type="text"
           name="title"
           id="title"
-          onChange={(e) => { setBook({ ...book, title: e.target.value }); }}
+          onChange={handleInputChange}
         />
         <select
           name="categories"
           id="categories"
-          onChange={(e) => { setBook({ ...book, category: e.target.value }); }}
+          onChange={handleCategoryChange}
         >
           <option value={CATEGORIES[0]}>{CATEGORIES[0]}</option>
           <option value={CATEGORIES[1]}>{CATEGORIES[1]}</option>
@@ -39,8 +63,6 @@ const BooksForm = () => {
         </select>
         <button type="submit">Add Book</button>
       </form>
-      <h1>{book.title}</h1>
-      <h1>{book.category}</h1>
     </div>
   );
 };
