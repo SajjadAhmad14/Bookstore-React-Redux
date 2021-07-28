@@ -1,6 +1,17 @@
+body {
+  background-color: silver;
+}
 form {
   text-align: center;
   margin-bottom: 20px;
+}
+
+#title {
+  margin-left: 340px;
+}
+
+#categories {
+  margin-left: 340px;
 }
 
 table thead {
