@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'semantic-ui-css/semantic.min.css';
+import { Button } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import allActions from '../store/actions/index';
 
@@ -38,6 +39,7 @@ const BooksForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(allActions.bookActions.addBook(book));
+    document.querySelector('form').reset();
   };
 
   return (
@@ -49,7 +51,7 @@ const BooksForm = () => {
             Book Title
             <div className="two fields">
               <div className="field">
-                <input type="text" name="title" id="title" onChange={handleInputChange} placeholder="First Name" />
+                <input type="text" name="title" id="title" onChange={handleInputChange} placeholder="First Name" required="true" />
               </div>
             </div>
           </label>
@@ -57,7 +59,6 @@ const BooksForm = () => {
         <div className="two fields">
           <div className="field">
             <select className="ui fluid dropdown" name="categories" id="categories" onChange={handleCategoryChange}>
-              <option value={CATEGORIES[0]}>{CATEGORIES[0]}</option>
               <option value={CATEGORIES[1]}>{CATEGORIES[1]}</option>
               <option value={CATEGORIES[2]}>{CATEGORIES[2]}</option>
               <option value={CATEGORIES[3]}>{CATEGORIES[3]}</option>
@@ -67,7 +68,7 @@ const BooksForm = () => {
             </select>
           </div>
         </div>
-        <button type="submit" className="ui button">ADD BOOK</button>
+        <Button primary type="submit" className="ui button">ADD BOOK</Button>
       </form>
     </div>
   );
