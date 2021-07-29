@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
+
+body {
+  background-color: silver;
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
+
 form {
   text-align: center;
   margin-bottom: 20px;
+}
+
+#title {
+  margin-left: 340px;
+  color: #000;
+  font-size: 16px;
+}
+
+#categories {
+  margin-left: 340px;
 }
 
 table thead {
