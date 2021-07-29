@@ -59,12 +59,9 @@ const BooksForm = () => {
         <div className="two fields">
           <div className="field">
             <select className="ui fluid dropdown" name="categories" id="categories" onChange={handleCategoryChange}>
-              <option value={CATEGORIES[1]}>{CATEGORIES[1]}</option>
-              <option value={CATEGORIES[2]}>{CATEGORIES[2]}</option>
-              <option value={CATEGORIES[3]}>{CATEGORIES[3]}</option>
-              <option value={CATEGORIES[4]}>{CATEGORIES[4]}</option>
-              <option value={CATEGORIES[5]}>{CATEGORIES[5]}</option>
-              <option value={CATEGORIES[6]}>{CATEGORIES[6]}</option>
+              {CATEGORIES.map((item) => (
+                <option value={item} key={item}>{item}</option>
+              ))}
             </select>
           </div>
         </div>
