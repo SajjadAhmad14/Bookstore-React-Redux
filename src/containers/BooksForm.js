@@ -3,9 +3,10 @@ import 'semantic-ui-css/semantic.min.css';
 import { Button } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import allActions from '../store/actions/index';
+import categories from './Categories';
 
 const BooksForm = () => {
-  const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const CATEGORIES = categories();
   const [book, setBook] = useState({
     id: 1,
     title: '',
