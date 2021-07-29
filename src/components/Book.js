@@ -1,13 +1,11 @@
 import React from 'react-dom';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import allActions from '../store/actions/index';
 
-const Book = ({ book }) => {
-  const dispatch = useDispatch();
+const Book = ({ book, handleRemove }) => {
   const { id, title, category } = book;
-  const deleteRow = () => {
-    dispatch(allActions.bookActions.removeBook(book));
+  const deleteRow = (e) => {
+    e.preventDefault();
+    handleRemove(e, book);
   };
 
   return (
@@ -31,4 +29,5 @@ const Book = ({ book }) => {
 export default Book;
 Book.propTypes = {
   book: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  handleRemove: PropTypes.func.isRequired,
 };

@@ -1,9 +1,15 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import allActions from '../store/actions/index';
 import Book from '../components/Book';
 
 const BooksList = () => {
   const newState = useSelector((state) => state.booksReducer);
+  const dispatch = useDispatch();
+  const handleRemove = (e, book) => {
+    e.preventDefault();
+    dispatch(allActions.bookActions.removeBook(book));
+  };
   return (
     <table className="orange size">
       <thead>
@@ -16,7 +22,7 @@ const BooksList = () => {
       </thead>
       <tbody>
         {newState.map((item) => (
-          <Book book={item} key={item.title} />
+          <Book book={item} key={item.title} handleRemove={handleRemove} />
         ))}
       </tbody>
     </table>
