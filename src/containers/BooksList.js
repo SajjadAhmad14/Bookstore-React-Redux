@@ -13,6 +13,9 @@ const BooksList = () => {
     e.preventDefault();
     dispatch(allActions.bookActions.removeBook(book));
   };
+  const handleFilterChange = (filter) => {
+    dispatch(allActions.filterActions.filterBooks(filter));
+  };
   return (
     <div>
       <table className="orange size">
@@ -30,7 +33,7 @@ const BooksList = () => {
           ))}
         </tbody>
       </table>
-      <CategoryFilter />
+      <CategoryFilter handleFilterChange={handleFilterChange} />
     </div>
   );
 };

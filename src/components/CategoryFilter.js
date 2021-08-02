@@ -1,25 +1,29 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import 'semantic-ui-css/semantic.min.css';
+import PropTypes from 'prop-types';
 import categories from '../containers/Categories';
-import allActions from '../store/actions/index';
+// import allActions from '../store/actions/index';
 
-const CategoryFilter = () => {
+const CategoryFilter = ({ handleFilterChange }) => {
   const CATEGGORIES = categories();
   CATEGGORIES.unshift('All');
   const [filter, setFilter] = useState({
     category: '',
   });
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const handleCategory = (e) => {
     e.preventDefault();
-    const category = e.target.value;
+    let category = e.target.value;
+    if (category === 'All') {
+      category = '';
+    }
     setFilter({
       ...filter,
       category,
     });
   };
-  dispatch(allActions.filterActions.filterBooks(filter));
+  handleFilterChange(filter);
   return (
     <div>
       <div className="two fields">
@@ -37,3 +41,6 @@ const CategoryFilter = () => {
 };
 
 export default CategoryFilter;
+CategoryFilter.propTypes = {
+  handleFilterChange: PropTypes.func.isRequired,
+};
