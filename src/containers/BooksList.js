@@ -5,9 +5,13 @@ import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = () => {
-  const bookState = useSelector((state) => state.booksReducer);
-  const filterState = useSelector((state) => state.filterReducer.category.category);
-  console.log(filterState);
+  const fState = useSelector((state) => state.filterReducer.category.category);
+  let bookState = [];
+  if (fState === '') {
+    bookState = useSelector((state) => state.booksReducer);
+  } else {
+    bookState = useSelector((state) => state.booksReducer).filter((i) => i.category === fState);
+  }
   const dispatch = useDispatch();
   const handleRemove = (e, book) => {
     e.preventDefault();

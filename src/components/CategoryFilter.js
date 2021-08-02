@@ -1,9 +1,7 @@
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
 import 'semantic-ui-css/semantic.min.css';
 import PropTypes from 'prop-types';
 import categories from '../containers/Categories';
-// import allActions from '../store/actions/index';
 
 const CategoryFilter = ({ handleFilterChange }) => {
   const CATEGGORIES = categories();
@@ -11,7 +9,6 @@ const CategoryFilter = ({ handleFilterChange }) => {
   const [filter, setFilter] = useState({
     category: '',
   });
-  // const dispatch = useDispatch();
   const handleCategory = (e) => {
     e.preventDefault();
     let category = e.target.value;
