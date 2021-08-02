@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import PropTypes from 'prop-types';
-import categories from '../containers/Categories';
+import categories from './Categories';
 
 const CategoryFilter = ({ handleFilterChange }) => {
   const CATEGGORIES = categories();
