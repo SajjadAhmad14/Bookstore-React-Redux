@@ -32,7 +32,6 @@ const CategoryFilter = ({ handleFilterChange }) => {
           </select>
         </div>
       </div>
-      <h1>{filter.category}</h1>
     </div>
   );
 };
