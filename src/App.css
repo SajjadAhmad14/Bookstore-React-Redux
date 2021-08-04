@@ -1,8 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
 
+:root {
+  --white: #ffffff;
+  --azure: #0290ff;
+  --black-two: #121212;
+}
+
 body {
-  background-color: silver;
+  background-color: #f5f6fa;
   font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white);
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+}
+
+.store-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.books {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.categories {
+  width: 6.563rem;
+  height: 1rem;
+  margin: 1.125rem 41.5rem 0.688rem 2.563rem;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.store-branding {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+
+.oval {
+  width: 3rem;
+  height: 3rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.log-in {
+  width: 2.813rem;
+  height: 2.813rem;
+  font-size: 30px;
+  color: var(--azure);
 }
 
 form {
