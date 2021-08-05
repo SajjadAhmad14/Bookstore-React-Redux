@@ -21,22 +21,10 @@ const BooksList = () => {
     dispatch(allActions.filterActions.filterBooks(filter));
   };
   return (
-    <div>
-      <table className="orange size">
-        <thead>
-          <tr>
-            <td>ID</td>
-            <td>Title</td>
-            <td>Category</td>
-            <td>Remove</td>
-          </tr>
-        </thead>
-        <tbody>
-          {bookState.map((item) => (
-            <Book book={item} key={item.title} handleRemove={handleRemove} />
-          ))}
-        </tbody>
-      </table>
+    <div className="book-list">
+      {bookState.map((item) => (
+        <Book book={item} key={item.title} handleRemove={handleRemove} />
+      ))}
       <CategoryFilter handleFilterChange={handleFilterChange} />
     </div>
   );

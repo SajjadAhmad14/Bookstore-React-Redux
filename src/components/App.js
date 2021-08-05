@@ -6,8 +6,8 @@ import '../App.css';
 const App = () => (
   <div className="App">
     <NavBar />
-    <BooksForm />
     <BooksList />
+    <BooksForm />
   </div>
 );
 

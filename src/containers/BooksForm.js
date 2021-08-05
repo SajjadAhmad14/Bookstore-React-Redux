@@ -46,7 +46,6 @@ const BooksForm = () => {
   return (
     <div>
       <form className="ui form" onSubmit={handleSubmit}>
-        <h4 className="ui dividing header">BOOK STORE</h4>
         <div className="field">
           <label htmlFor="title">
             Book Title
