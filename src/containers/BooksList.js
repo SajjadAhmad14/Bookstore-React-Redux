@@ -22,10 +22,10 @@ const BooksList = () => {
   };
   return (
     <div className="book-list">
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       {bookState.map((item) => (
         <Book book={item} key={item.title} handleRemove={handleRemove} />
       ))}
-      <CategoryFilter handleFilterChange={handleFilterChange} />
     </div>
   );
 };
