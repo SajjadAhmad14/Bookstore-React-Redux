@@ -3,6 +3,7 @@
   --white-two: #fafafa;
   --azure: #0290ff;
   --black-two: #121212;
+  --warm-grey: #888888;
 }
 
 @font-face {
@@ -284,18 +285,56 @@ form {
   margin-bottom: 20px;
 }
 
+.form-container {
+  display: flex;
+}
+
+.form-title {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin-left: 65px;
+  margin-top: 40px;
+  font-family: MontserratBold;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: var(--warm-grey);
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+} 
+
+.form {
+  text-align: center;
+  width: 90%;
+}
+
+.union {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #title {
-  margin-left: 340px;
   color: #000;
   font-size: 16px;
+  width: 300%;
+  height: 40px;
 }
 
-#categories {
-  margin-left: 340px;
+#category {
+  margin-left: 100px;
+  width: 200%;
+  height: 40px;
 }
 
-table thead {
-  background-color: #c0c0c0;
+.filter {
+  margin: 0 65px 30px 65px;
 }
 
 .size {

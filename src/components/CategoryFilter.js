@@ -22,7 +22,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
   };
   handleFilterChange(filter);
   return (
-    <div>
+    <div className="filter">
       <div className="two fields">
         <div className="field">
           <select className="ui fluid dropdown" name="categories" id="categories" onChange={handleCategory}>
