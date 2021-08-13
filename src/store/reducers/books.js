@@ -1,4 +1,19 @@
 const initialState = [
+  {
+    id: Math.floor(Math.random() * (100000 - 1 + 1)) + 1,
+    title: 'The Hunger Games',
+    category: 'Action',
+  },
+  {
+    id: Math.floor(Math.random() * (100000 - 1 + 1)) + 1,
+    title: 'Dune',
+    category: 'History',
+  },
+  {
+    id: Math.floor(Math.random() * (100000 - 1 + 1)) + 1,
+    title: 'Capital in the Twenty-First Century',
+    category: 'Education',
+  },
 ];
 const books = (state = initialState, action) => {
   switch (action.type) {
