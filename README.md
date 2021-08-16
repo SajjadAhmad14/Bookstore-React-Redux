@@ -4,7 +4,7 @@
  
  # About Project
 
-  N/A
+  This app is a books management system for library. User can add, remove, edit, and update a book's information.
 
 ## Requirements
 

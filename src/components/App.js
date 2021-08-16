@@ -4,8 +4,8 @@ import '../App.css';
 
 const App = () => (
   <div className="App">
-    <BooksForm />
     <BooksList />
+    <BooksForm />
   </div>
 );
 
