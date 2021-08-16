@@ -117,6 +117,11 @@ body {
   border-radius: 4px;
 }
 
+select {
+  outline: none;
+  border: none;
+}
+
 .category {
   width: 3.063rem;
   height: 1.125rem;
@@ -337,6 +342,11 @@ form {
   font-size: 16px;
   width: 300%;
   height: 40px;
+}
+
+input[type=text], select {
+  outline-color: #e8e8e8;
+  border: solid 1px #e8e8e8;
 }
 
 #category {
