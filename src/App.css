@@ -138,7 +138,7 @@ select {
 }
 
 .categories {
-	appearance: none;
+  appearance: none;
   border: none;
   background-color: transparent;
   width: 6.563rem;
@@ -156,9 +156,9 @@ select {
 }
 
 .categories:focus {
- background-color: transparent;
- border: none;
- outline: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 .categories option {
@@ -344,7 +344,8 @@ form {
   height: 40px;
 }
 
-input[type=text], select {
+input[type=text],
+select {
   outline-color: #e8e8e8;
   border: solid 1px #e8e8e8;
 }
@@ -366,5 +367,5 @@ input[type=text], select {
 }
 
 .silver {
-  background-color: #c0c0c0;
+  background-color: #977c7c;
 }
