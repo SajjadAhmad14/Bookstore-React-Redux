@@ -23,15 +23,12 @@ const CategoryFilter = ({ handleFilterChange }) => {
   handleFilterChange(filter);
   return (
     <div className="filter">
-      <div className="two fields">
-        <div className="field">
-          <select className="ui fluid dropdown" name="categories" id="categories" onChange={handleCategory}>
-            {CATEGGORIES.map((item) => (
-              <option value={item} key={item}>{item}</option>
-            ))}
-          </select>
-        </div>
-      </div>
+      <select name="categories" className="categories" onChange={handleCategory}>
+        <option value="" selected disabled hidden>CATEGORIES</option>
+        {CATEGGORIES.map((item) => (
+          <option value={item} key={item}>{item}</option>
+        ))}
+      </select>
     </div>
   );
 };
